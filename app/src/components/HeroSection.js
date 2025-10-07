@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HeroSection.css'; // Crearemos este archivo a continuación
+import './HeroSection.css';
 
 const HeroSection = () => {
   return (

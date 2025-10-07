@@ -7,14 +7,18 @@ import ServicesPage from './pages/ServicesPage';
 import LoginPage from './pages/LoginPage';
 import AdminLayout from './layouts/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
-import ServiceCreatePage from './pages/admin/ServiceCreatePage'; // <--- NUEVO
-import ServiceEditPage from './pages/admin/ServiceEditPage'; 
+import ServiceCreatePage from './pages/admin/ServiceCreatePage';
+import ServiceEditPage from './pages/admin/ServiceEditPage';
+import BlogPage from './pages/BlogPage';
+import PostDetailPage from './pages/PostDetailPage';
+import PostCreatePage from './pages/admin/PostCreatePage';
+import PostEditPage from './pages/admin/PostEditPage';
 
 
 import QuotePage from './pages/QuotePage';
 import ServiceDetailPage from './pages/ServicesPage';
+import Footer from './components/Footer';
 
-// Componente simple para el Header
 const Header = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container">
@@ -29,10 +33,13 @@ const Header = () => (
             <Link className="nav-link" to="/servicios">Servicios</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/login">Login</Link>
+            <Link className="nav-link" to="/blog">Blog</Link>
           </li>
           <li className="nav-item ms-lg-3">
             <Link className="btn btn-primary" to="/cotizacion">Solicitar Cotización</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">Login</Link>
           </li>
         </ul>
       </div>
@@ -52,16 +59,21 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/cotizacion" element={<QuotePage />} />
           <Route path="/servicios/:id" element={<ServiceDetailPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<PostDetailPage />} />
           
           {/* Rutas Protegidas de Administrador */}
           <Route element={<AdminLayout />}>
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/admin/servicios/nuevo" element={<ServiceCreatePage />} />
             <Route path="/admin/servicios/editar/:id" element={<ServiceEditPage />} />
+            <Route path="/admin/posts/nuevo" element={<PostCreatePage />} />
+            <Route path="/admin/posts/editar/:id" element={<PostEditPage />} />
           </Route>
         </Routes>
       </main>
       {/* Aquí podrías agregar un componente Footer */}
+      <Footer />
     </Router>
   );
 }

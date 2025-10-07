@@ -1,9 +1,9 @@
 /* 1. Definición de colores corporativos como variables CSS */
 :root {
-  --primary-color: #e63946; /* Rojo principal para acentos y botones */
-  --dark-color: #1d3557;    /* Un negro azulado oscuro para textos y fondos */
-  --light-color: #f1faee;   /* Un blanco ligeramente cálido para fondos */
-  --text-color: #212529;    /* Color de texto principal */
+  --primary-color: #00A896;   /* Verde azulado para acentos y botones */
+  --dark-color: #2B303A;       /* Carbón oscuro para textos y fondos oscuros */
+  --light-color: #F4F7F5;      /* Gris muy claro para fondos */
+  --text-color: #212529;       /* Color de texto principal */
 }
 
 
@@ -31,6 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-  background-color: #d0313e; 
-  border-color: #d0313e;
+  background-color: #F4F7F5; 
+  border-color: #2B303A;
 }

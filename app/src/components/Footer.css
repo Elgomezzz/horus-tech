@@ -1,0 +1,38 @@
+.footer-container {
+  background-color: var(--dark-color, #2B303A);
+  color: #FFFFFF; 
+  padding: 4rem 0 2rem 0;
+}
+
+.footer-brand, .footer-heading {
+  color: #FFFFFF;
+}
+
+.footer-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+}
+
+.social-icons .social-icon {
+  color: #FFFFFF; 
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: color 0.2s;
+}
+
+.social-icons .social-icon:hover {
+  color: var(--primary-color, #00A896); 
+}
+
+.footer-bottom {
+  border-top: 1px solid #495057;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  opacity: 0.7;
+}

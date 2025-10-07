@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\QuoteController;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::post('/quotes', [QuoteController::class, 'store']);
 
 // Rutas Públicas de Autenticación
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);
+
 
 // Rutas Protegidas
 Route::middleware('auth:sanctum')->group(function () {
@@ -36,4 +40,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/services', [ServiceController::class, 'store']);       // Crear
     Route::put('/services/{service}', [ServiceController::class, 'update']);    // Actualizar
     Route::delete('/services/{service}', [ServiceController::class, 'destroy']); // Borrar
+
+    Route::post('/posts', [PostController::class, 'store']);
+    Route::put('/posts/{post}', [PostController::class, 'update']);
+    Route::delete('/posts/{post}', [PostController::class, 'destroy']);
 });
