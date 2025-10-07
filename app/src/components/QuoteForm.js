@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from 'react';
-// Ahora importamos getServices para obtener la lista
 import { getServices, submitQuote } from '../services/api'; 
 
 const QuoteForm = () => {
-  // Nuevo estado para almacenar la lista de servicios
   const [services, setServices] = useState([]);
   
   const [formData, setFormData] = useState({
     client_name: '',
     client_email: '',
-    service_id: '', // Este campo ahora se llenará dinámicamente
+    service_id: '',
     project_details: '',
     has_domain: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
-  // useEffect para cargar los servicios cuando el componente se monta
   useEffect(() => {
     getServices().then(data => {
       setServices(data);
