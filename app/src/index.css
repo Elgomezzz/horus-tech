@@ -1,0 +1,36 @@
+/* 1. Definición de colores corporativos como variables CSS */
+:root {
+  --primary-color: #e63946; /* Rojo principal para acentos y botones */
+  --dark-color: #1d3557;    /* Un negro azulado oscuro para textos y fondos */
+  --light-color: #f1faee;   /* Un blanco ligeramente cálido para fondos */
+  --text-color: #212529;    /* Color de texto principal */
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #d0313e; 
+  border-color: #d0313e;
+}
