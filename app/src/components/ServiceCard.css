@@ -1,0 +1,26 @@
+.service-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon-container {
+  color: var(--primary-color); 
+}
+
+.service-card .card-footer {
+  background-color: transparent;
+  border-top: none; 
+  padding: 0;
+  margin-top: 1rem;
+}
